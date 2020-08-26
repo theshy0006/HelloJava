@@ -27,7 +27,12 @@
     <string name="text_navigation_hide">隐藏导航栏</string>
     <string name="text_bar_hide">隐藏全部</string>
     <string name="text_bar_show">恢复显示</string>
-    <string name="text_full">有导航栏的情况，Activity全屏显示(fullScreen方法演示)（仔细看\'我是底部\'四个字）</string>
-    <string name="text_bar_font_dark">状态栏字体颜色为深色(android6.0以上或者miuiv6以上或者flymeOS4+)</string>
-    <string name="text_bar_font_light">状态栏字体颜色为亮色（默认就是亮色）</string>
+    <string name="text_scanner">扫一扫</string>
+    <string name="text_search">搜一搜</string>
+    <string name="todo">TODO</string>
+    <string name="text_more">更多</string>
+    <string name="home_home">首页</string>
+    <string name="home_cate">分类</string>
+    <string name="home_cart">购物车</string>
+    <string name="home_mine">我的</string>
 </resources>

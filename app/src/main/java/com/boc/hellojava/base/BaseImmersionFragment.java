@@ -11,27 +11,23 @@ import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.boc.hellojava.R;
 import com.gyf.immersionbar.ImmersionBar;
+import com.gyf.immersionbar.components.SimpleImmersionFragment;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-
-
-// BaseFragment适合用在Activity做沉浸式（fragment+viewpaper）
-
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseImmersionFragment extends SimpleImmersionFragment {
 
     protected String mTag = this.getClass().getSimpleName();
 
     private Unbinder unbinder;
     protected Activity mActivity;
     protected View mRootView;
-    protected View statusBarView;
     protected Toolbar toolbar;
+    protected View statusBarView;
 
     @Override
     public void onAttach(Context context) {
@@ -95,6 +91,12 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract int getLayoutId();
 
+
+    @Override
+    public void initImmersionBar() {
+        ImmersionBar.with(this).keyboardEnable(true).init();
+    }
+
     /**
      * 初始化数据
      */
@@ -123,5 +125,4 @@ public abstract class BaseFragment extends Fragment {
             ImmersionBar.setTitleBar(this, toolbar);
         }
     }
-
 }
